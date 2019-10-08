@@ -1,6 +1,6 @@
-# EssentialTools
-These Are Some Essential Tools or Quick Fixes To Some Misconfigurations And Common Errors .
+# JustDoubleClicks
+This Repo Contains Essential Tools, Quick Fixes, Automated And Hassle-Free Programs Which Come In Handy To Sort Some Misconfigurations, Common Errors or Just For Fun .
 
-- [fixPath.py](/fixPath.py) - Adds Python Path To The System Environment Variable *Path*
-- [prepGFG.py](/prepGFG.py) - Copied Code From GFG Can Be Formatted And Put Into Clipboard
-- [changeWall.bat](/changeWall.bat) - Change Wallpaper With Just A Double-Click
+- [fixPath.py](/fixPath.py) - Fixes *pip not found* Error
+- [prepGFG.py](/prepGFG.py) - Copied Code From GFG In Clipboard Is Formatted
+- [changeWall.bat](/changeWall.bat) - Change Desktop Wallpaper
