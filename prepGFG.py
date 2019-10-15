@@ -1,17 +1,13 @@
 import re
-import pyperclip
+input_file = 'IN.txt'
+with open(input_file,"r") as f:
+    data = f.read()
+# Remove multi empty lines 
+data=re.sub(r'\n\s*\n','\n',data,re.MULTILINE)
+# Remove single line comments
+data=re.sub(r'\n#.*', "", data)
+# Remove multi comments in code
+for x in re.findall(r'("[^\n]*"(?!\\))|(//[^\n]*$|/(?!\\)\*[\s\S]*?\*(?!\\)/)',data,8):data=data.replace(x[1],'')
 
-OUT = open('OUT.txt','r+') 
-
-with open("IN.txt", "r") as IN:
-    data = IN.readlines()
-    for line in data:
-        x = re.search("^(\s)*/+.*",line)
-        if x == None :
-            print(line.rstrip())
-            OUT.write(line.rstrip()+"\n")
-
-OUT.seek(0,0)
-pyperclip.copy(OUT.read())
-
-OUT.close()
+with open("OUT.txt", "w") as f:
+    f.write(data)
