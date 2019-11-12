@@ -12,7 +12,7 @@ if is_admin():
     py_path = os.getcwd()
 
     f=open("update.bat","w+")
-    f.write("setx /m Path \"%Path%" + py_path + ";" + py_path+"\Scripts;\"\n")
+    f.write("setx /m Path \"%Path%" + ";" + py_path + ";" + py_path+"\Scripts;\"\n")
     #f.write("pause")
     f.close()
 
